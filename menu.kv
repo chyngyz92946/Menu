@@ -1,0 +1,196 @@
+<CustomButton@Button>
+    size_hint: 1, 1
+    background_color: 100, 100, 100, 1
+    color: .17, .17, .17, 1
+    text_size: self.size
+    halign: 'left'
+    valign: 'top'
+
+
+<CustomLabel@Label>
+    color: .17, .17, .17, 1
+    canvas.before:
+        Color:
+            rgba: .80, .87, .91, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+
+<MenuButton@Button>
+    background_color: .14, .67, .87, 1
+    color: 100, 100, 100, 1
+
+
+<MenuLabel@Label>
+    color: .17, .17, .17, 1
+    canvas.before:
+        Color:
+            rgba: .80, .87, .91, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<Menu>:
+    orientation: 'vertical'
+    padding: 2
+    spacing: 2
+    canvas.before:
+        Color:
+            rgba: .93, .93, .91, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, .08
+        spacing: 2
+
+        MenuButton:
+            text: 'Categories'
+
+        MenuLabel:
+            text: 'Drinkables'
+
+        TextInput:
+            id: txtinput
+            multiline: False
+            size_hint: 1, 1
+            cursor_width: 3
+            font_size: 25
+
+        MenuButton:
+            size_hint: .2, 1
+
+        MenuLabel:
+            id: datelabel
+            text: 'Date: '
+            text_size: cm(7), cm(0)
+
+
+        MenuButton:
+            text: 'Delete'
+            size_hint: .2, 1
+
+    BoxLayout:
+        orientation: 'horizontal'
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            GridLayout:
+                cols: 3
+                spacing: 2
+
+                CustomButton:
+                    id: button1.1
+                    text: 'Cappuccino'
+                    on_press: root.menu(self.text, '1', '300.00')
+                CustomButton:
+                    id: button1.2
+                    text: 'Latte'
+                    on_press: root.menu(self.text, '1', '350.00')
+                CustomButton:
+                    id: button1.3
+                    text: 'Black tea'
+                    on_press: root.menu(self.text, '1', '250.00')
+
+                CustomButton:
+                    id: button2.1
+                    text: 'Green tea'
+                    on_press: root.menu(self.text, '1', '300.00')
+                CustomButton:
+                    id: button2.2
+                    text: 'Cacao'
+                    on_press: root.menu(self.text, '1', '70.00')
+                CustomButton:
+                    id: button2.3
+                    text: 'Hot chocolate'
+                    on_press: root.menu(self.text, '1', '90.00')
+
+                CustomButton:
+                    id: button3.1
+                    text: 'Americano'
+                    on_press: root.menu(self.text, '1', '70.00')
+                CustomButton:
+                    id: button3.2
+                    text: 'Moccasino'
+                    on_press: root.menu(self.text, '1', '120.00')
+                CustomButton:
+                    id: button3.3
+                    text: 'Coffee rafa'
+                    on_press: root.menu(self.text, '1', '120.00')
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 2
+
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint: 1, .2
+                spacing: 2
+
+                MenuLabel:
+                    text: 'Name'
+                    size_hint: .6, 1
+
+                MenuLabel:
+                    text: 'Quantity'
+                    size_hint: .2, 1
+
+                MenuLabel:
+                    text: 'Price'
+                    size_hint: .2, 1
+
+            BoxLayout:
+                id: addLabel
+                orientation: 'vertical'
+                size_hint: 1, 3
+                spacing: 2
+
+                canvas.before:
+                    Color:
+                        rgba: 100, 100, 100, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, .7
+                spacing: 2
+
+                CustomLabel:
+                    text: '%    Add discount'
+
+                CustomLabel:
+                    text: 'Total: '
+                    text_size: cm(16), cm(0)
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint: 1, .9
+                    spacing: 2
+
+                    CustomLabel:
+                        id: count_co
+
+
+                    CustomLabel:
+                        id: count_pr
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, .08
+        spacing: 2
+
+
+        MenuButton:
+            text: 'Back'
+
+        MenuButton:
+            text: 'Home'
+
+        MenuButton:
+            text: 'Check'

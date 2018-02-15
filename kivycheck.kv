@@ -1,0 +1,149 @@
+<CustomLabel@Label>
+    color: .17, .17, .17, 1
+    canvas.before:
+        Color:
+            rgba: .80, .87, .91, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<CustomButton@Button>
+    size_hint: 1, 1
+    background_color: .14, .67, .87, 1
+    color: 100, 100, 100, 1
+
+<KeyButton@Button>
+    size_hint: 1, 1
+    background_color: 100, 100, 100, 1
+    color: .17, .17, .17, 1
+
+
+<Menu>:
+    orientation: 'horizontal'
+    color: .17, .17, .17, 1
+    canvas.before:
+        Color:
+            rgba: .80, .87, .91, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 3
+
+        CustomLabel:
+            text: 'To pay'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, .5
+            spacing: 3
+
+            CustomButton:
+                text: 'Cash'
+
+            CustomButton:
+                text: 'Cr.Card'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, .5
+            spacing: 3
+
+            CustomLabel:
+                text: 'Payment'
+
+            TextInput:
+                multiline: False
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, .5
+            spacing: 3
+
+            CustomLabel:
+                text: 'Change'
+
+            TextInput:
+                multiline: False
+
+            CustomLabel:
+                text: 'fiscal receipt'
+
+            Switch:
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, .5
+            spacing: 3
+
+            CustomLabel:
+
+            Switch:
+
+
+            CustomLabel:
+
+            Switch:
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 3
+
+            CustomLabel:
+                text: 'Comment'
+
+            TextInput:
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: 3
+
+            CustomButton:
+                text: 'X'
+
+            CustomButton:
+                text: 'V'
+
+    AnchorLayout:
+        padding: [8, 35, 8, 45]
+
+        GridLayout:
+            cols:4
+            spacing: 3
+
+            KeyButton:
+                text: '7'
+            KeyButton:
+                text: '8'
+            KeyButton:
+                text: '9'
+            KeyButton:
+                text: 'C'
+
+            KeyButton:
+                text: '4'
+            KeyButton:
+                text: '5'
+            KeyButton:
+                text: '6'
+            KeyButton:
+                text: 'X'
+
+            KeyButton:
+                text: '1'
+            KeyButton:
+                text: '2'
+            KeyButton:
+                text: '3'
+            KeyButton:
+                text: 'x'
+
+            KeyButton:
+                text: '0'
+            KeyButton:
+                text: '.'
+            KeyButton:
+                text: 'Enter'
